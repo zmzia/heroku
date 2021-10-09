@@ -1,0 +1,34 @@
+<html>
+    <head>
+        <title>BigMart Sales Prediction</title>
+
+    </head>
+    <body bgcolor='cyan' text-align='center'>
+        <Marquee><B>BigMart Sales Prediction</B></Marquee>
+        <form action="{{url_for('predict')}}" method='post'>
+            <table>
+                <tr>
+                    <td>
+                        <label>Item Weight</label>
+                    </td>
+                    <td>
+                        <input type = "text" name = "Item_Weight" />
+                    </td>
+                </tr><br>
+
+            <tr><td><label>Item Visibility</label></td>
+                <td><input type = "text" name = "Item_Visibility" /></td></tr><br>
+
+            <tr><td><label>Item MRP</label></td>
+                <td><input type = "text" name = "Item_MRP" /></td></tr><br>
+                    
+            <tr><td><label>Outlet Age</label></td>
+                <td><input type = "text" name = "Age" /></td></tr><br>
+            
+            <tr><td><label>Click predict for sales</label></td><td><button type = "submit">Predict</button></td></tr>
+            </table>
+
+        </form>
+        <label bgcolor='pink'><b>{{prediction}}</b></label>
+    </body>
+</html>

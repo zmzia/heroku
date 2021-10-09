@@ -1,1 +1,1 @@
-web: gunicorn app:avbm_app
+web: gunicorn avbm_app:app

@@ -1,0 +1,19 @@
+<html>
+    <head>
+        <title>BigMart Sales Prediction</title>
+    </head>
+    <body>
+        <form action="{{url_for('predict')}}" method='post'>
+            <label>Item Weight</label><input type = "text" name = "Item_Weight" /><br>
+            <div><br></div>
+            <label>Item Visibility</label><input type = "text" name = "Item_Visibility" /><br>
+            <div><br></div>
+            <label>Item MRP</label><input type = "text" name = "Item_MRP" /><br>
+            <div><br></div>
+            <label>Outlet Age</label><input type = "text" name = "Age" /><br>
+            <div><br></div>
+            <button type = "submit">Predict</button>
+        </form>
+        <label>Predicted Outlet Sales:</label>{{prediction}}
+    </body>
+</html>

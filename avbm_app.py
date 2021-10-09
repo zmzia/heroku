@@ -6,6 +6,10 @@ app = Flask(__name__)
 
 model = joblib.load("AV_BM1.pkl")
 
+@app.route('/')
+def hi():
+    return render_template('index.html')
+
 @app.route('/predict', methods=['POST'])
 def predict():
     print(request.form.values())
